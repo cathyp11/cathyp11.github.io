@@ -590,6 +590,10 @@ ol>li{
   font-size: 15px;
 }
 
+.captions {
+  text-align: center;
+}
+
 @media only screen and (max-width: 1200px) {
   .about{
     margin: 0;
