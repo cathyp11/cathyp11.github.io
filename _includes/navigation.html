@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand nav-middle" href="\">Yejin Cathy Park</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNav">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="\" class="{% if page.work or page.title contains "Home" %}active{% endif %}">Work</a></li>
+            <li><a href="video" class="{% if page.video or page.url == "/video.html" %}active{% endif %}">Video</a></li>
+            <li><a href="about" class="{% if page.url == "/about.html" %}active{% endif %}">About</a></li>
+        </ul>
+    </div>
+</div>

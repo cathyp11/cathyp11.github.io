@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!-- JQuery and Extra -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+    <!-- Rippler -->
+    <link rel="stylesheet" type="text/css" href="css/rippler.min.css" />
+    <script type="text/javascript" src="js/jquery.rippler.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style_login.css" />
+</head>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".rippler").rippler({
+        effectClass: 'rippler-effect',
+        effectSize: 16,
+        duration: 400
+    });
+    $("input[type=text]").blur(function() {
+    	if(!$(this).val()){
+         $(".messageEm").slideDown("slow");
+    	}
+    });
+
+    $("input[type=password]").blur(function() {
+    	if(!$(this).val()){
+        $(".messagePw").slideDown("slow");
+    	}
+    });
+});
+</script>
+
+<body>
+    <div class="container-fluid">
+        <div class="row logoBox">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="tbs">
+                </div>
+                <img class="logo center-block" src="img/logo.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="loginBox">
+                    <form class="login">
+                        <fieldset class="emailForm">
+                            <input type="text" name="email" required="required" />
+                            <label for="email">Email</label>
+                            <div class="underline"></div>
+                            <span class="messageEm">Please enter email</span>
+                        </fieldset>
+                        <fieldset class="passwordForm">
+                            <input type="password" name="password" required="required" />
+                            <label for="password">Password</label>
+                            <div class="underline"></div>
+                            <span class="messagePw">Please enter password</span>
+                        </fieldset>
+                        <span class="forgot"><a href="#">Forgot Password?</a></span>
+                        <button class="default rippler rippler-default">Login</button>
+                        <span>Or</span>
+                        <button class="facebook rippler rippler-default">Login with Facebook</button>
+                    </form>
+                </div>
+                <p class="text-center">New to TimeBlocks? <a href="#" class="signup">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
