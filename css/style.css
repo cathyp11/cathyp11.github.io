@@ -124,7 +124,7 @@ ol>li{
   padding-bottom: 15px;
 }
 
-.container-fluid:last-of-type{
+.workDetail .container-fluid:last-of-type{
   padding-bottom: 70px;
 }
 
@@ -150,7 +150,7 @@ ol>li{
   h5{
     font-size: 16px;
   }
-  .container-fluid:last-of-type{
+  .workDetail .container-fluid:last-of-type{
     padding-bottom: 30px;
   }
 }
