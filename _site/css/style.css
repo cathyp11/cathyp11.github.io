@@ -110,23 +110,23 @@ h5{
 	color: #505151;
 }
 
-p{
-	font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-  }
-
-ol{
+p, ol, .table{
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-}
+  }
+
+/*ol{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}*/
 
 ol>li{
   padding-bottom: 15px;
 }
 
-.table{
+/*.table{
   font-family: 'Poppins', sans-serif;
-}
+}*/
 
 .workDetail .container-fluid:last-of-type{
   padding-bottom: 70px;
