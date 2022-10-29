@@ -119,8 +119,13 @@ ol{
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
 }
+
 ol>li{
   padding-bottom: 15px;
+}
+
+.container-fluid:last-of-type{
+  padding-bottom: 70px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -144,6 +149,9 @@ ol>li{
   }
   h5{
     font-size: 16px;
+  }
+  .container-fluid:last-of-type{
+    padding-bottom: 30px;
   }
 }
 
