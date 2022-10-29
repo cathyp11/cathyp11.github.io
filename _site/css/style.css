@@ -124,6 +124,10 @@ ol>li{
   padding-bottom: 15px;
 }
 
+.table{
+  font-family: 'Poppins', sans-serif;
+}
+
 .workDetail .container-fluid:last-of-type{
   padding-bottom: 70px;
 }
