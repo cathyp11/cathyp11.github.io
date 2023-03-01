@@ -450,6 +450,10 @@ ol>li{
   letter-spacing: 1px;
 }
 
+.workDetail .btn-block{
+  padding: 15px 12px;
+}
+
 .workDetail .btn:hover{
   color: #000;
   background: transparent;
