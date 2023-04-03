@@ -378,6 +378,10 @@ ol>li{
   text-transform: uppercase;
 }
 
+.workDetail .nospace{
+  margin-bottom: 0;
+}
+
 .workDetail .skills p{
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
