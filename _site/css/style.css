@@ -347,6 +347,12 @@ ol>li{
   max-width: 800px;
   margin: 30px auto;
 }
+
+.display-flex-center {
+    display:flex;
+    align-items:center;
+}
+
 .workDetail h1{
   font-size: 22px;
   text-align: center;
@@ -369,6 +375,12 @@ ol>li{
 .workDetail img{
   margin: 0 auto;
 }
+
+.workDetail .keywords{
+  color:#016eb7;
+  font-size: 18px;
+}
+
 
 .workDetail .head{
   font-weight: 900;
