@@ -348,10 +348,6 @@ ol>li{
   margin: 30px auto;
 }
 
-.display-flex-center {
-    display:flex;
-    align-items:center;
-}
 
 .workDetail h1{
   font-size: 22px;
@@ -450,6 +446,18 @@ ol>li{
     margin: 5px auto;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .workDetail .row>div{
+    margin: 5px auto;
+  }
+  .display-flex-center {
+    display:flex;
+    align-items:center;
+  }
+}
+
+
 
 /*myvoice page*/
 
