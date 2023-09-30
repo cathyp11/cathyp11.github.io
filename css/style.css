@@ -689,7 +689,8 @@ ol>li{
 }
 
 .back-to-top i:hover {
-    color: #000;
+    color: #016eb7;
+    background: transparent;
 }
 
 .circle-icon {
@@ -698,8 +699,9 @@ ol>li{
     height: 50px;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
     vertical-align: middle;
+    border: 2px #016EB7 solid;
 }
 
 /*footer*/
