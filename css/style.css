@@ -76,7 +76,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
+    font-family: "Wix Madefor Text", sans-serif;
 }
 
 h1,
@@ -91,7 +92,8 @@ p {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+/*    font-family: 'Playfair Display', serif;*/
+/*font-family: "Wix Madefor Text", sans-serif;*/
 }
 
 h3 {
@@ -112,7 +114,7 @@ h6 {
 }
 
 .table {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
 }
 
@@ -240,7 +242,7 @@ ol>li {
 
 
 .navbar-brand {
-    font-family: 'Playfair Display', serif;
+/*    font-family: 'Playfair Display', serif;*/
 }
 
 /* Ensure the navbar elements are vertically centered */
@@ -297,7 +299,7 @@ ol>li {
 
 .forms {
     width: 50%;
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
 }
 
 @media only screen and (max-width: 450px) {
@@ -466,7 +468,7 @@ ol>li {
 }
 
 .workDetail h3 {
-    font-family: 'Playfair Display', serif;
+/*    font-family: 'Playfair Display', serif;*/
 }
 
 .workDetail p {
@@ -495,7 +497,7 @@ ol>li {
 
 
 .workDetail .head {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     letter-spacing: 2px;
     color: #016eb7;
     text-transform: uppercase;
@@ -507,7 +509,7 @@ ol>li {
 }
 
 .workDetail .skills p {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -521,7 +523,7 @@ ol>li {
 }
 
 .workDetail ul {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
 }
 
 .workDetail ul>li {
@@ -589,7 +591,7 @@ ol>li {
 /*myvoice page*/
 
 .workDetail .btn {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
     border: 2px #016eb7 solid;
     background: #016eb7;
@@ -616,7 +618,7 @@ ol>li {
 }
 
 .workDetail .abstracts h2 {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     text-align: center;
     margin: 30px auto 60px;
 }
@@ -678,7 +680,7 @@ ol>li {
 
 .work-nav .btn,
 .pursuits-nav .btn {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
     border: 2px #000 solid;
     background: #000;
@@ -718,7 +720,7 @@ ol>li {
 }
 
 .about .btn {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
     border: 2px #000 solid;
     background: #000;
@@ -745,7 +747,7 @@ ol>li {
 
 .skills ul {
     list-style-type: none;
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     padding: 0;
     /*    font-size: 15px;*/
 }
@@ -788,7 +790,7 @@ ol>li {
     color: #000;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
 }
 
 .index-navbar .active,
