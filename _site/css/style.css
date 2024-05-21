@@ -75,8 +75,13 @@
     flex-direction: row;
 }
 
+.mt-10 {
+    margin-top: 10em;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
+    font-family: "Wix Madefor Text", sans-serif;
 }
 
 h1,
@@ -91,7 +96,8 @@ p {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+/*    font-family: 'Playfair Display', serif;*/
+/*font-family: "Wix Madefor Text", sans-serif;*/
 }
 
 h3 {
@@ -99,7 +105,8 @@ h3 {
 }
 
 h4 {
-    font-size: 20px;
+/*    font-size: 20px;*/
+padding-bottom: 15px;
 }
 
 h5 {
@@ -111,8 +118,12 @@ h6 {
     margin: 15px 0;
 }
 
+p {
+    font-size: 18px;
+}
+
 .table {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
 }
 
@@ -123,6 +134,10 @@ h6 {
 ol>li {
     padding-bottom: 15px;
 }
+
+.img-gif {
+    width: 80%;
+} 
 
 /*header*/
 
@@ -240,7 +255,7 @@ ol>li {
 
 
 .navbar-brand {
-    font-family: 'Playfair Display', serif;
+/*    font-family: 'Playfair Display', serif;*/
 }
 
 /* Ensure the navbar elements are vertically centered */
@@ -297,7 +312,7 @@ ol>li {
 
 .forms {
     width: 50%;
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
 }
 
 @media only screen and (max-width: 450px) {
@@ -425,7 +440,7 @@ ol>li {
     }
 
     h4 {
-        font-size: 18px;
+/*        font-size: 18px;*/
     }
 
     h5 {
@@ -454,8 +469,7 @@ ol>li {
 }
 
 .workDetail h1,
-.workDetail h2,
-.workDetail h3 {
+.workDetail h2{
     text-align: center;
     margin: 50px auto;
 }
@@ -466,13 +480,14 @@ ol>li {
 }
 
 .workDetail h3 {
-    font-family: 'Playfair Display', serif;
+/*    font-family: 'Playfair Display', serif;*/
+/*    margin: 20px auto;*/
 }
 
 .workDetail p {
-    line-height: 25px;
-    margin: 20px 0;
-    font-size: 16px;
+/*    line-height: 25px;*/
+    margin: 10px 0 20px;
+    font-size: 18px;
 }
 
 .workDetail a {
@@ -488,6 +503,10 @@ ol>li {
     margin: 0 auto;
 }
 
+.workDetail .img-small {
+    width: 70%;
+}
+
 .workDetail .keywords {
     color: #016eb7;
     font-size: 18px;
@@ -495,25 +514,34 @@ ol>li {
 
 
 .workDetail .head {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
+    font-size: 18px;
     letter-spacing: 2px;
     color: #016eb7;
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 20px 0 10px;
+    padding-bottom: 0;
 }
 
+.workDetail .head:first-of-type {
+    margin-top: 0;
+}
 .workDetail .nospace {
     margin-bottom: 0;
 }
 
 .workDetail .skills p {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     text-transform: uppercase;
     font-weight: 600;
 }
 
+.workDetail .skills h4 {
+    margin-top: 0;
+}
+
 .workDetail .skills ul {
-    line-height: 24px;
+/*    line-height: 24px;*/
 }
 
 .workDetail .skills ul>li {
@@ -521,11 +549,14 @@ ol>li {
 }
 
 .workDetail ul {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
+    line-height: auto;
+
 }
 
-.workDetail ul>li {
-    padding-bottom: 10px;
+.workDetail ul>li, .workDetail ol>li {
+/*    padding-bottom: 10px;*/
+    font-size: 18px;
 }
 
 .workDetail ol>li li {
@@ -571,7 +602,7 @@ ol>li {
 
 @media only screen and (min-width: 600px) {
     .workDetail .row>div {
-        margin: 5px auto;
+/*        margin: 5px auto;*/
     }
 
     .display-flex-center {
@@ -589,7 +620,7 @@ ol>li {
 /*myvoice page*/
 
 .workDetail .btn {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
     border: 2px #016eb7 solid;
     background: #016eb7;
@@ -616,7 +647,7 @@ ol>li {
 }
 
 .workDetail .abstracts h2 {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     text-align: center;
     margin: 30px auto 60px;
 }
@@ -678,7 +709,7 @@ ol>li {
 
 .work-nav .btn,
 .pursuits-nav .btn {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
     border: 2px #000 solid;
     background: #000;
@@ -718,7 +749,7 @@ ol>li {
 }
 
 .about .btn {
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     font-size: 15px;
     border: 2px #000 solid;
     background: #000;
@@ -745,7 +776,7 @@ ol>li {
 
 .skills ul {
     list-style-type: none;
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
     padding: 0;
     /*    font-size: 15px;*/
 }
@@ -766,7 +797,7 @@ ol>li {
     }
 
     .skills {
-        margin-top: 20px;
+/*        margin-top: 20px;*/
     }
 
     .inner {
@@ -788,7 +819,7 @@ ol>li {
     color: #000;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+/*    font-family: 'Poppins', sans-serif;*/
 }
 
 .index-navbar .active,
