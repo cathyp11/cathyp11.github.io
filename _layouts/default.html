@@ -45,6 +45,7 @@
 </head>
 
 <body>
+    {% assign is_kr = page.url contains '-kr' or page.url == '/kr' %}
     <div id="wrap">
         {% include navigation.html %}
         {{ content }}

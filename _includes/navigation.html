@@ -1,22 +1,25 @@
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand nav-middle fixed-top align-brand" href="\">Yejin Cathy Park</a>
+        <a class="navbar-brand nav-middle fixed-top align-brand" href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/kr{% else %}/{% endif %}">Yejin Cathy Park</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="myNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="\" class="nav-link {% if page.work or page.title contains "Home" %}active{% endif %}">Work</a>
+                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/kr{% else %}/{% endif %}" class="nav-link {% if page.work or page.title contains 'Home' %}active{% endif %}">Work</a>
                 </li>
                 <li class="nav-item">
-                    <a href="pursuits" class="nav-link {% if page.pursuits or page.url == "/pursuits.html" %}active{% endif %}">Creative Pursuits</a>
+                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/pursuits-kr{% else %}/pursuits{% endif %}" class="nav-link {% if page.pursuits or page.url == '/pursuits.html' or page.url == '/pursuits-kr.html' %}active{% endif %}">Creative Pursuits</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about" class="nav-link {% if page.url == "/about.html" %}active{% endif %}">About</a>
+                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/about-kr{% else %}/about{% endif %}" class="nav-link {% if page.url == '/about.html' or page.url=='/about-kr.html' %}active{% endif %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="img/resume_YejinPark.pdf" class="nav-link" title="Cathy Park Resume" target="_blank">Resume</a>
+                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}img/resume-kr_YejinPark.pdf{% else %}img/resume_YejinPark.pdf{% endif %}" class="nav-link" title="Cathy Park Resume" target="_blank">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/{% else %}/kr{% endif %}" class="nav-link btn d-block lang-btn" title="한국어">{% if page.url contains '-kr' or page.url == '/kr.html' %}English{% else %}한국어{% endif %}</a>
                 </li>
             </ul>
         </div>

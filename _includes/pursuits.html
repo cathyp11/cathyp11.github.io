@@ -1,7 +1,7 @@
 <div class="container pursuits-nav index-navbar">
     <div class="row">
         <div class="col-sm-6 col-12 mx-auto">
-            <a class="btn d-block" href="pursuits" title="See More Pursuits">See More Pursuits</a>
+            <a class="btn d-block" href="{% if page.url contains '-kr' %}/pursuits-kr{% else %}/pursuits{% endif %}" title="See More Pursuits">{% if page.url contains '-kr' %}취미생활 더보기{% else %}See More Pursuits{% endif %}</a>
         </div>
     </div>
 </div>

@@ -210,6 +210,32 @@ ol>li {
     /* Scale to full width on hover/focus */
 }
 
+#myNav .lang-btn {
+    font-size: 15px;
+    border: 2px #000 solid;
+    background: #000;
+/*    border-radius: 30px;*/
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+}
+
+#myNav .lang-btn:hover {
+    color: #000;
+    background: transparent;
+}
+
+#myNav .lang-btn::after {
+    content: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    #myNav .lang-btn {
+        margin: 15px;
+    }
+}
+
 .navbar-header span {
     background-color: #000;
 }
@@ -276,7 +302,7 @@ ol>li {
 
 
 /* Custom media query for screens below 992px (typical laptop dimension) */
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
     .navbar-brand.nav-middle {
         position: relative;
         /* Reset positioning */
