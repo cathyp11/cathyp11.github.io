@@ -16,7 +16,7 @@
                     <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/about-kr{% else %}/about{% endif %}" class="nav-link {% if page.url == '/about.html' or page.url=='/about-kr.html' %}active{% endif %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}img/resume-kr_YejinPark.pdf{% else %}img/resume_YejinPark.pdf{% endif %}" class="nav-link" title="Cathy Park Resume" target="_blank">Resume</a>
+                    <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}img/resume_kr_YejinPark.pdf{% else %}img/resume_en_YejinPark.pdf{% endif %}" class="nav-link" title="Cathy Park Resume" target="_blank">Resume</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% if page.url contains '-kr' or page.url == '/kr.html' %}/{% else %}/kr{% endif %}" class="nav-link btn d-block lang-btn" title="한국어">{% if page.url contains '-kr' or page.url == '/kr.html' %}English{% else %}한국어{% endif %}</a>
