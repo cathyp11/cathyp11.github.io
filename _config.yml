@@ -1,0 +1,7 @@
+exclude:
+  - _site
+  - .jekyll-cache
+  - .sass-cache
+  - vendor
+  - node_modules
+  - .github

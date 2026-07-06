@@ -1,0 +1,85 @@
+name: Deploy Jekyll to Pages (with password protection)
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: false
+
+      - name: Install Jekyll dependencies
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle install
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Encrypt riskreport pages
+        env:
+          RR_PW: ${{ secrets.RISKREPORT_PASSWORD }}
+        run: |
+          if [ -z "$RR_PW" ]; then
+            echo "ERROR: RISKREPORT_PASSWORD secret is not set."
+            exit 1
+          fi
+          mkdir -p /tmp/enc
+          STATICRYPT_OPTS=(
+            --short
+            --template .github/staticrypt-template.html
+            --template-title "This case study is under NDA"
+            --template-button "Unlock"
+            --template-placeholder "Password"
+            --template-remember "Keep me signed in for 24 hours"
+            --template-error "Incorrect password. Please try again."
+          )
+          npx --yes staticrypt _site/riskreport.html    -p "$RR_PW" "${STATICRYPT_OPTS[@]}" -d /tmp/enc
+          npx --yes staticrypt _site/riskreport-kr.html -p "$RR_PW" "${STATICRYPT_OPTS[@]}" -d /tmp/enc
+          cp /tmp/enc/riskreport.html    _site/riskreport.html
+          cp /tmp/enc/riskreport-kr.html _site/riskreport-kr.html
+          echo "Riskreport pages encrypted with custom prompt."
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

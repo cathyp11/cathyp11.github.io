@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="staticrypt-html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio · Password required</title>
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/4efdcc1eeb.js" crossorigin="anonymous"></script>
+
+    <style>
+        html,body{margin:0;padding:0;height:100%}
+        *{box-sizing:border-box}
+        body{
+            font-family:'Wix Madefor Text',sans-serif;
+            background:#fafafa;
+            color:#000;
+        }
+        .hidden{display:none !important}
+
+        /* site wrap (matches site style.css) */
+        #wrap{
+            margin:30px auto;
+            overflow-y:hidden;
+            min-height:calc(100vh - 60px);
+            display:flex;
+            flex-direction:column;
+        }
+        @media only screen and (min-width:320px) and (max-width:480px){
+            #wrap{
+                margin:10px 0;
+                min-height:calc(100vh - 20px);
+            }
+        }
+
+        /* nav — verbatim from site style.css */
+        #myNav a{ color:#000; text-align:center; text-decoration:none; }
+        #myNav .active{ font-weight:600; color:#016eb7; }
+        #myNav .nav-link{
+            position:relative; display:inline-block; overflow:hidden;
+            font-size:15px; z-index:1050;
+        }
+        #myNav .nav-link::after{
+            content:''; position:absolute; bottom:0; left:0; right:0;
+            height:2px; background-color:#016eb7;
+            transform:scaleX(0); transform-origin:center;
+            transition:transform 0.5s ease;
+        }
+        #myNav .nav-link:hover::after,
+        #myNav .nav-link:focus::after{ transform:scaleX(1); }
+        #myNav .lang-btn{
+            font-size:15px; border:2px #000 solid; background:#000;
+            font-weight:400; color:#fff; letter-spacing:1px; padding:8px 12px;
+        }
+        #myNav .lang-btn:hover{ color:#000; background:transparent; }
+        #myNav .lang-btn::after{ content:none; }
+        @media only screen and (max-width:1024px){
+            #myNav .lang-btn{ margin:15px; }
+        }
+        .nav-middle{
+            position:absolute; width:100%; left:0; text-align:center;
+            margin:auto; font-size:28px; font-weight:700;
+        }
+        .nav-item{ padding-left:12px; padding-right:12px; }
+        .navbar-toggler{ z-index:1040; border:none; margin-left:auto; }
+        .navbar-toggler:focus{ box-shadow:none; }
+        .navbar-nav .nav-link:focus{ background-color:#fff; }
+        .navbar{ display:flex; align-items:center; }
+        .navbar-brand{ text-decoration:none; }
+        .navbar-brand.nav-middle{
+            position:absolute; width:100%; left:0; text-align:center;
+            margin:auto; font-size:28px; font-weight:700;
+        }
+        @media (max-width:1024px){
+            .navbar-brand.nav-middle{
+                position:relative !important;
+                left:0 !important; right:auto !important; top:auto !important;
+                transform:none !important; width:auto !important;
+                text-align:left; margin:auto 1em !important;
+            }
+            .nav-item{ text-align:center; }
+        }
+        .align-brand{ padding-top:0.5rem; padding-bottom:0.5rem; }
+        @media only screen and (min-width:320px) and (max-width:480px){
+            .navbar-brand.nav-middle{ font-size:23px; }
+        }
+
+        /* main */
+        main{
+            flex:1; display:flex; align-items:center; justify-content:center;
+            padding:40px 20px;
+        }
+        .card{
+            max-width:460px; width:100%;
+            background:#fff; border:1px solid #ececec; border-radius:14px;
+            padding:56px 44px;
+            box-shadow:0 24px 60px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
+            text-align:center;
+        }
+        .lock-badge{
+            width:56px; height:56px; background:#eaf3fb; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            margin:0 auto 28px; color:#016eb7;
+        }
+        .lock-badge svg{ width:26px; height:26px; }
+        .eyebrow{
+            font-size:11px; letter-spacing:2.5px; text-transform:uppercase;
+            color:#016eb7; font-weight:600; margin-bottom:14px;
+        }
+        h1{
+            font-family:'Wix Madefor Text',sans-serif;
+            font-size:24px; font-weight:700; color:#000;
+            margin-bottom:14px; line-height:1.4; letter-spacing:-0.3px;
+        }
+        .instructions{
+            font-size:14.5px; color:#555; line-height:1.65;
+            margin-bottom:34px;
+        }
+        .instructions a{
+            color:#016eb7; text-decoration:none; font-weight:600;
+            border-bottom:1px solid rgba(1,110,183,0.25);
+        }
+        .instructions a:hover{ border-bottom-color:#016eb7; }
+
+        .staticrypt-password-container{
+            position:relative;
+            margin-bottom:0;
+        }
+        #staticrypt-password{
+            width:100%; padding:14px 44px 14px 18px;
+            border:1px solid #e2e2e2; border-radius:8px;
+            font-size:15px; font-family:inherit;
+            outline:none; background:#fafafa;
+            transition:all 0.15s ease;
+        }
+        #staticrypt-password:focus{
+            border-color:#016eb7; background:#fff;
+            box-shadow:0 0 0 3px rgba(1,110,183,0.12);
+        }
+        .staticrypt-toggle-password-visibility{
+            cursor:pointer; height:18px; width:18px;
+            opacity:0.5; padding:0;
+            position:absolute; right:16px; top:50%;
+            transform:translateY(-50%);
+            transition:opacity 0.15s ease;
+        }
+        .staticrypt-toggle-password-visibility:hover{ opacity:0.8; }
+
+        .staticrypt-remember{
+            display:flex; align-items:center; justify-content:center;
+            gap:8px; font-size:13px; color:#666;
+            margin:18px 0 26px;
+        }
+        .staticrypt-remember input[type=checkbox]{
+            accent-color:#016eb7;
+            margin:0;
+        }
+
+        .card .staticrypt-decrypt-button{
+            width:100%; padding:14px;
+            background:#016eb7; color:#fff;
+            border:none; border-radius:8px;
+            font-size:14.5px; font-family:inherit;
+            font-weight:600; letter-spacing:0.3px;
+            cursor:pointer; text-transform:none;
+            transition:all 0.18s ease;
+        }
+        .card .staticrypt-decrypt-button:hover,
+        .card .staticrypt-decrypt-button:focus{
+            background:#015a95;
+            transform:translateY(-1px);
+            box-shadow:0 8px 18px rgba(1,110,183,0.28);
+        }
+        .card-footer{
+            margin-top:32px; padding-top:22px;
+            border-top:1px solid #f0f0f0;
+            font-size:11.5px; color:#999; letter-spacing:0.5px;
+        }
+
+        /* footer (matches site) */
+        .site-footer{
+            padding:24px 20px 32px; text-align:center;
+        }
+        .site-footer .social{ margin-bottom:12px; }
+        .site-footer .social a{
+            padding-right:20px; color:#000; text-decoration:none;
+            transition:color 0.15s ease;
+        }
+        .site-footer .social a:hover{ color:#016eb7; }
+        .site-footer .social a:last-of-type{ padding-right:0; }
+        .site-footer p{ font-size:14px; color:#000; margin:0; }
+
+        /* staticrypt loading spinner */
+        .staticrypt-spinner-container{
+            flex:1; display:flex; align-items:center; justify-content:center;
+            padding:40px 20px;
+        }
+        .staticrypt-spinner{
+            display:inline-block; width:2rem; height:2rem;
+            border:0.25em solid #ddd; border-right-color:#016eb7;
+            border-radius:50%;
+            animation:staticrypt-spin 0.75s linear infinite;
+        }
+        @keyframes staticrypt-spin{ 100%{ transform:rotate(360deg); } }
+    </style>
+</head>
+<body class="staticrypt-body">
+<div id="wrap">
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand nav-middle align-brand" href="/" id="nav-brand">Yejin Cathy Park</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link active" id="nav-work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/pursuits" class="nav-link" id="nav-pursuits">Creative Pursuits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link" id="nav-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/img/resume_en_YejinPark.pdf" class="nav-link" title="Cathy Park Resume" target="_blank" id="nav-resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/kr" class="nav-link btn d-block lang-btn" title="한국어" id="nav-lang">한국어</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script>
+        // Match KR/EN based on which encrypted page we're on
+        (function(){
+            if (window.location.pathname.includes('-kr') || window.location.pathname === '/kr.html') {
+                document.getElementById('nav-brand').href = '/kr';
+                document.getElementById('nav-work').href = '/kr';
+                document.getElementById('nav-pursuits').href = '/pursuits-kr';
+                document.getElementById('nav-about').href = '/about-kr';
+                document.getElementById('nav-resume').href = '/img/resume_kr_YejinPark.pdf';
+                document.getElementById('nav-lang').href = '/';
+                document.getElementById('nav-lang').textContent = 'English';
+            }
+        })();
+    </script>
+
+    <main>
+        <div id="staticrypt_loading" class="staticrypt-spinner-container">
+            <div class="staticrypt-spinner"></div>
+        </div>
+
+        <div id="staticrypt_content" class="hidden" style="flex:1; display:flex; align-items:center; justify-content:center; padding:40px 20px;">
+            <div class="card">
+                <div class="lock-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 1.5C8.41 1.5 5.5 4.41 5.5 8v2.5H5c-1.1 0-2 .9-2 2V21c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8.5c0-1.1-.9-2-2-2h-.5V8c0-3.59-2.91-6.5-6.5-6.5zm-4.5 6.5c0-2.48 2.02-4.5 4.5-4.5s4.5 2.02 4.5 4.5v2.5h-9V8zm4.5 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                    </svg>
+                </div>
+                <div class="eyebrow">Portfolio</div>
+                <h1>/*[|template_title|]*/0</h1>
+                <p class="instructions">Please contact <a href="mailto:cathyyejin@gmail.com">cathyyejin@gmail.com</a> for access.</p>
+
+                <form id="staticrypt-form" action="#" method="post">
+                    <div class="staticrypt-password-container">
+                        <input
+                            id="staticrypt-password"
+                            type="password"
+                            name="password"
+                            placeholder="/*[|template_placeholder|]*/0"
+                            autofocus
+                        />
+                        <img
+                            class="staticrypt-toggle-password-visibility"
+                            alt="/*[|template_toggle_show|]*/0"
+                            title="/*[|template_toggle_show|]*/0"
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM4LjggNS4xQzI4LjQtMy4xIDEzLjMtMS4yIDUuMSA5LjJTLTEuMiAzNC43IDkuMiA0Mi45bDU5MiA0NjRjMTAuNCA4LjIgMjUuNSA2LjMgMzMuNy00LjFzNi4zLTI1LjUtNC4xLTMzLjdMNTI1LjYgMzg2LjdjMzkuNi00MC42IDY2LjQtODYuMSA3OS45LTExOC40YzMuMy03LjkgMy4zLTE2LjcgMC0yNC42Yy0xNC45LTM1LjctNDYuMi04Ny43LTkzLTEzMS4xQzQ2NS41IDY4LjggNDAwLjggMzIgMzIwIDMyYy02OC4yIDAtMTI1IDI2LjMtMTY5LjMgNjAuOEwzOC44IDUuMXpNMjIzLjEgMTQ5LjVDMjQ4LjYgMTI2LjIgMjgyLjcgMTEyIDMyMCAxMTJjNzkuNSAwIDE0NCA2NC41IDE0NCAxNDRjMCAyNC45LTYuMyA0OC4zLTE3LjQgNjguN0w0MDggMjk0LjVjOC40LTE5LjMgMTAuNi00MS40IDQuOC02My4zYy0xMS4xLTQxLjUtNDcuOC02OS40LTg4LjYtNzEuMWMtNS44LS4yLTkuMiA2LjEtNy40IDExLjdjMi4xIDYuNCAzLjMgMTMuMiAzLjMgMjAuM2MwIDEwLjItMi40IDE5LjgtNi42IDI4LjNsLTkwLjMtNzAuOHpNMzczIDM4OS45Yy0xNi40IDYuNS0zNC4zIDEwLjEtNTMgMTAuMWMtNzkuNSAwLTE0NC02NC41LTE0NC0xNDRjMC02LjkgLjUtMTMuNiAxLjQtMjAuMkw4My4xIDE2MS41QzYwLjMgMTkxLjIgNDQgMjIwLjggMzQuNSAyNDMuN2MtMy4zIDcuOS0zLjMgMTYuNyAwIDI0LjZjMTQuOSAzNS43IDQ2LjIgODcuNyA5MyAxMzEuMUMxNzQuNSA0NDMuMiAyMzkuMiA0ODAgMzIwIDQ4MGM0Ny44IDAgODkuOS0xMi45IDEyNi4yLTMyLjVMMzczIDM4OS45eiIvPjwvc3ZnPg=="
+                        />
+                    </div>
+
+                    <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
+                        <input id="staticrypt-remember" type="checkbox" name="remember" />
+                        /*[|template_remember|]*/0
+                    </label>
+
+                    <input type="submit" class="staticrypt-decrypt-button" value="/*[|template_button|]*/0" />
+                </form>
+
+                <div class="card-footer">Protected · Confidential Case Study</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="social">
+            <a href="https://www.linkedin.com/in/yc-park" target="_blank" aria-label="linkedin profile"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a href="/contact" aria-label="contact me"><i class="fa fa-envelope-o fa-2x"></i></a>
+        </div>
+        <p>© Yejin Park 2026. All Rights Reserved.</p>
+    </footer>
+
+</div>
+
+<script>
+    // these variables will be filled when generating the file
+    const staticryptInitiator = /*[|js_staticrypt|]*/ 0;
+    const templateError = "/*[|template_error|]*/0",
+        templateToggleAltShow = "/*[|template_toggle_show|]*/0",
+        templateToggleAltHide = "/*[|template_toggle_hide|]*/0",
+        isRememberEnabled = /*[|is_remember_enabled|]*/ 0,
+        staticryptConfig = /*[|staticrypt_config|]*/ 0;
+
+    const templateConfig = {
+        rememberExpirationKey: "staticrypt_expiration",
+        rememberPassphraseKey: "staticrypt_passphrase",
+        replaceHtmlCallback: null,
+        clearLocalStorageCallback: null,
+    };
+
+    const staticrypt = staticryptInitiator.init(staticryptConfig, templateConfig);
+
+    window.onload = async function () {
+        const { isSuccessful } = await staticrypt.handleDecryptOnLoad();
+
+        if (!isSuccessful) {
+            document.getElementById("staticrypt_loading").classList.add("hidden");
+            document.getElementById("staticrypt_content").classList.remove("hidden");
+            document.getElementById("staticrypt-password").focus();
+
+            if (isRememberEnabled) {
+                document.getElementById("staticrypt-remember-label").classList.remove("hidden");
+            }
+        }
+    };
+
+    // toggle password visibility
+    const toggleIcon = document.querySelector(".staticrypt-toggle-password-visibility");
+    const imgSrcEyeClosed =
+        "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM4LjggNS4xQzI4LjQtMy4xIDEzLjMtMS4yIDUuMSA5LjJTLTEuMiAzNC43IDkuMiA0Mi45bDU5MiA0NjRjMTAuNCA4LjIgMjUuNSA2LjMgMzMuNy00LjFzNi4zLTI1LjUtNC4xLTMzLjdMNTI1LjYgMzg2LjdjMzkuNi00MC42IDY2LjQtODYuMSA3OS45LTExOC40YzMuMy03LjkgMy4zLTE2LjcgMC0yNC42Yy0xNC45LTM1LjctNDYuMi04Ny43LTkzLTEzMS4xQzQ2NS41IDY4LjggNDAwLjggMzIgMzIwIDMyYy02OC4yIDAtMTI1IDI2LjMtMTY5LjMgNjAuOEwzOC44IDUuMXpNMjIzLjEgMTQ5LjVDMjQ4LjYgMTI2LjIgMjgyLjcgMTEyIDMyMCAxMTJjNzkuNSAwIDE0NCA2NC41IDE0NCAxNDRjMCAyNC45LTYuMyA0OC4zLTE3LjQgNjguN0w0MDggMjk0LjVjOC40LTE5LjMgMTAuNi00MS40IDQuOC02My4zYy0xMS4xLTQxLjUtNDcuOC02OS40LTg4LjYtNzEuMWMtNS44LS4yLTkuMiA2LjEtNy40IDExLjdjMi4xIDYuNCAzLjMgMTMuMiAzLjMgMjAuM2MwIDEwLjItMi40IDE5LjgtNi42IDI4LjNsLTkwLjMtNzAuOHpNMzczIDM4OS45Yy0xNi40IDYuNS0zNC4zIDEwLjEtNTMgMTAuMWMtNzkuNSAwLTE0NC02NC41LTE0NC0xNDRjMC02LjkgLjUtMTMuNiAxLjQtMjAuMkw4My4xIDE2MS41QzYwLjMgMTkxLjIgNDQgMjIwLjggMzQuNSAyNDMuN2MtMy4zIDcuOS0zLjMgMTYuNyAwIDI0LjZjMTQuOSAzNS43IDQ2LjIgODcuNyA5MyAxMzEuMUMxNzQuNSA0NDMuMiAyMzkuMiA0ODAgMzIwIDQ4MGM0Ny44IDAgODkuOS0xMi45IDEyNi4yLTMyLjVMMzczIDM4OS45eiIvPjwvc3ZnPg==";
+    const imgSrcEyeOpened =
+        "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTI4OCAzMmMtODAuOCAwLTE0NS41IDM2LjgtMTkyLjYgODAuNkM0OC42IDE1NiAxNy4zIDIwOCAyLjUgMjQzLjdjLTMuMyA3LjktMy4zIDE2LjcgMCAyNC42QzE3LjMgMzA0IDQ4LjYgMzU2IDk1LjQgMzk5LjRDMTQyLjUgNDQzLjIgMjA3LjIgNDgwIDI4OCA0ODBzMTQ1LjUtMzYuOCAxOTIuNi04MC42YzQ2LjgtNDMuNSA3OC4xLTk1LjQgOTMtMTMxLjFjMy4zLTcuOSAzLjMtMTYuNyAwLTI0LjZjLTE0LjktMzUuNy00Ni4yLTg3LjctOTMtMTMxLjFDNDMzLjUgNjguOCAzNjguOCAzMiAyODggMzJ6TTE0NCAyNTZhMTQ0IDE0NCAwIDEgMSAyODggMCAxNDQgMTQ0IDAgMSAxIC0yODggMHptMTQ0LTY0YzAgMzUuMy0yOC43IDY0LTY0IDY0Yy03LjEgMC0xMy45LTEuMi0yMC4zLTMuM2MtNS41LTEuOC0xMS45IDEuNi0xMS43IDcuNGMuMyA2LjkgMS4zIDEzLjggMy4yIDIwLjdjMTMuNyA1MS4yIDY2LjQgODEuNiAxMTcuNiA2Ny45czgxLjYtNjYuNCA2Ny45LTExNy42Yy0xMS4xLTQxLjUtNDcuOC02OS40LTg4LjYtNzEuMWMtNS44LS4yLTkuMiA2LjEtNy40IDExLjdjMi4xIDYuNCAzLjMgMTMuMiAzLjMgMjAuM3oiLz48L3N2Zz4=";
+    if (toggleIcon) {
+        toggleIcon.addEventListener("click", function () {
+            const passwordInput = document.getElementById("staticrypt-password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.src = imgSrcEyeOpened;
+                toggleIcon.alt = templateToggleAltHide;
+                toggleIcon.title = templateToggleAltHide;
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.src = imgSrcEyeClosed;
+                toggleIcon.alt = templateToggleAltShow;
+                toggleIcon.title = templateToggleAltShow;
+            }
+        });
+    }
+
+    // handle password form submission
+    document.getElementById("staticrypt-form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const password = document.getElementById("staticrypt-password").value,
+            isRememberChecked = document.getElementById("staticrypt-remember").checked;
+
+        const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, isRememberChecked);
+
+        if (!isSuccessful) {
+            alert(templateError);
+        }
+    });
+</script>
+</body>
+</html>
