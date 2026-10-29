@@ -1,0 +1,359 @@
+---
+layout: default
+title: 포어텔 랩 포털 — 박예진
+work: true
+---
+<style>
+    .lp-num { color: #2A52BC; font-weight: 700; font-size: 1.5rem; line-height: 1; margin-bottom: .5rem; }
+    .lp-list { list-style: none; padding: 0; }
+    .lp-list li { padding: .4rem 0; border-bottom: 1px solid #eee; }
+    .lp-quote { border-left: 3px solid #2A52BC; padding: .25rem 0 .25rem 1.25rem; }
+    .lp-quote p { margin-bottom: .25rem; }
+    .lp-note { color: #888; font-size: .9rem; text-align: left; }
+    .lp-label { color: #2A52BC; font-weight: 700; font-size: .8rem; letter-spacing: .05em; margin-bottom: .25rem; }
+    .lp-impact { background: #2A52BC; color: #fff; border-radius: 16px; padding: 20px; margin-top: 1.5rem; }
+    .lp-impact .pan { background: rgba(255,255,255,.12); border-radius: 12px; padding: 14px; height: 100%; display: flex; flex-direction: column; }
+    .lp-impact .pan-t { font-size: .9rem; margin-bottom: 12px; opacity: .9; }
+    .lp-impact .pan-t b { margin-right: .5rem; opacity: 1; }
+    .lp-impact .row-b { display: flex; gap: 12px; background: rgba(255,255,255,.14); border-radius: 6px; padding: 7px 10px; margin-bottom: 6px; font-size: .8rem; }
+    .lp-impact .row-b { flex: 1; align-items: center; }
+    .lp-impact .row-b b { width: 5.6em; flex: none; white-space: nowrap; }
+    .lp-impact .row-b.dash { background: none; border: 1px dashed rgba(255,255,255,.6); }
+    .lp-impact .after { background: #fff; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .lp-impact .step { display: flex; align-items: center; gap: 10px; background: #eef1fb; color: #2A52BC; font-weight: 600; border-radius: 6px; padding: 7px 10px; flex: 1; margin-bottom: 0; font-size: .8rem; }
+    .lp-impact .step:last-child { margin-bottom: 0; }
+    .lp-impact .step i { font-style: normal; width: 22px; height: 22px; flex: none; border-radius: 50%; background: #2A52BC; color: #fff; font-size: .75rem; display: flex; align-items: center; justify-content: center; }
+    .lp-impact .lp-result { display: flex; flex-direction: column; justify-content: center; padding: 8px 14px; }
+    .lp-impact .num span { display: inline-block; white-space: nowrap; }
+    .lp-impact .num { font-size: clamp(1.9rem, 7vw, 2.6rem); overflow-wrap: anywhere; font-weight: 700; line-height: 1.1; letter-spacing: -1px; margin: .25rem 0; }
+    .lp-impact .sub { font-size: .85rem; opacity: .75; }
+    .lp-big { font-size: 2.5rem; font-weight: 700; color: #333; line-height: 1.1; letter-spacing: -1px; }
+    .lp-secondary { margin: 3.5rem auto 0; max-width: 78%; }
+    .lp-secondary h6 { font-weight: 600; margin-bottom: .5rem; }
+    .lp-compare h6 { font-weight: 600; margin-bottom: .5rem; }
+    .lp-compare .captions { text-align: left; }
+    .lp-dcard { height: 100%; display: flex; flex-direction: column; }
+    .lp-dcard h5 { margin-bottom: .5rem; }
+    .lp-dcard p { font-size: .95rem; }
+    .lp-dimg { margin-top: 1rem; }
+    .lp-dimg img { width: 100%; border: 1px solid #e6e8f0; border-radius: 8px; }
+    .lp-flow img + .captions { margin-top: .5rem; margin-bottom: 1.25rem; }
+    .lp-flow .captions:last-child { margin-bottom: 0; }
+    .workDetail h4:not(.head) { font-size: calc(1.43rem + .34vw); padding-bottom: 20px; }
+    @media (min-width: 1200px) { .workDetail h4:not(.head) { font-size: 1.68rem; } }
+    @media (max-width: 767px) {
+        .lp-secondary { max-width: 100%; }
+    }
+</style>
+<div class="workDetail">
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="img/labportal/banner.png" alt="노트북 화면의 검체 목록과 휴대폰 속 연구 참여자 결과 화면 (가상 데이터)" />
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <h1>포어텔 랩 포털: 검사실 업무를 하나로 잇는 운영 포털 설계</h1>
+                <h2>Product Design + Internal Tool</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-2">
+                <h3>Overview</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4 class="head">Brief</h4>
+                <p>
+                    스프레드시트, 스크립트, 디자인 툴에 흩어져 있던 검사 데이터와 결과지 업무를 하나로 모은 웹 포털을 설계하고 구현했습니다. 설계부터 초기 운영 적용까지 약 2주가 걸렸습니다.
+                </p>
+                <h4 class="head">Challenge</h4>
+                <p>
+                    검사 업무를 멈추지 않고 전환해야 했습니다. 운영팀이 바로 업무에 사용할 수 있으면서, 실험팀도 익숙한 업무 방식을 해치지 않고 옮겨 올 수 있도록 설계해야 했습니다.
+                </p>
+                <h4 class="head">Duration</h4>
+                <p>2026년 9월 30일 - 현재 (운영 중)</p>
+                <h4 class="head">Role</h4>
+                <p>Product Designer — End-to-end UX/UI 설계 및 AI 활용 구현</p>
+                <div class="row">
+                    <div class="col-sm-6 col-12 skills">
+                        <h4 class="head">Methods</h4>
+                        <ul>
+                            <li>Workflow Analysis</li>
+                            <li>User Feedback</li>
+                            <li>Comparative Prototyping</li>
+                            <li>Iterative Design</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-12 skills">
+                        <h4 class="head">Tools</h4>
+                        <ul>
+                            <li>Claude Code</li>
+                            <li>Python (FastAPI)</li>
+                            <li>PostgreSQL</li>
+                            <li>Notion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Problem</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>검사 업무마다 서로 다른 도구를 사용해야 했습니다</h4>
+                <h5 class="mt-4">Stakeholders</h5>
+                <ul>
+                    <li><strong>실험팀</strong> — 검체를 접수하고 실험 데이터를 입력합니다.</li>
+                    <li><strong>운영팀</strong> — 검사 진행 현황을 관리하고 결과지를 만들어 전달합니다.</li>
+                    <li><strong>연구 참여자</strong> — 검사 결과를 확인합니다.</li>
+                </ul>
+                <h5 class="mt-5">Key Problems</h5>
+                <p>
+                    <strong>분산된 업무와 반복적인 수작업.</strong> 데이터 입력부터 결과지 전달까지 여러 도구를 오가며 같은 정보를 반복해서 입력하고 정리해야 했습니다.
+                </p>
+                <p>
+                    <strong>업무 현황과 변경 이력 관리의 어려움.</strong> 검체별 진행 상황과 마감을 확인하기 어려웠고, 데이터 수정 이력과 접근 권한도 관리되지 않았습니다.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Approach</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>세 가지 원칙을 바탕으로 포털을 설계했습니다</h4>
+                <p>
+                    결과지 업무를 직접 수행하며 문제를 찾고, 실험 경험이 있는 운영 담당자와 데이터 관리 및 실험팀의 의견을 반영했습니다. 기존 업무 방식을 고려해 설계 방향을 정하고, 구현한 화면을 테스트 데이터로 검증했습니다.
+                </p>
+                <div class="row mt-4">
+                    <div class="col-sm-4">
+                        <div class="lp-num">01</div>
+                        <h5>여러 도구를 오가지 않도록</h5>
+                        <p>흩어져 있던 확인과 기록 업무를 하나의 포털에서 처리하도록 설계했습니다.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="lp-num">02</div>
+                        <h5>기존 업무 방식은 유지하도록</h5>
+                        <p>익숙한 표 형태를 유지하면서 반복 입력을 줄이는 기능을 더했습니다.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="lp-num">03</div>
+                        <h5>사용자와 기기에 맞도록</h5>
+                        <p>받는 사람에게 필요한 결과만 보여 주고, 기기에 맞게 화면 구성을 바꿨습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 1 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 1</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>새 화면 대신, 익숙한 표에서 공통값을 입력하도록 설계했습니다</h4>
+                <p>
+                    실험팀은 동일한 값을 튜브마다 반복 입력해야 했습니다. 두 가지 방식을 시험용 데이터로 구현하고, 실험 경험이 있는 운영 담당자와 비교해 기존 표를 유지하는 방식을 선택했습니다.
+                </p>
+                <div class="row mt-4">
+                    <div class="col-sm-5">
+                        <img class="img-fluid" style="filter: grayscale(1); opacity: .75;" src="img/labportal/1-2-option1.png" alt="미채택 대안 — 배치 입력 전용 화면" />
+                    </div>
+                    <div class="col-sm-7">
+                        <p class="lp-note mb-1">미채택 대안</p>
+                        <h5>배치 입력 전용 화면</h5>
+                        <p>입력 화면이 두 곳으로 나뉘면서, 어느 화면을 사용할지 판단해야 하는 부담이 생겼습니다.</p>
+                    </div>
+                </div>
+                <h5 class="mt-5">최종 설계: 기존 표에서 공통값 입력</h5>
+                <ol class="mt-3">
+                    <li><strong>기존 선택 방식 유지</strong> — 검체 목록과 결과지에서 사용하던 선택 방식을 그대로 적용했습니다.</li>
+                    <li><strong>공통값 일괄 입력</strong> — 여러 튜브에 같은 값을 한 번에 입력합니다. 기존 기록 약 600건을 분석해 기본값을 정했습니다.</li>
+                    <li><strong>날짜는 직접 입력하도록</strong> — 날짜는 자동으로 채우지 않고, 필요할 때 '오늘' 버튼으로 빠르게 입력하도록 했습니다.</li>
+                </ol>
+                <div class="lp-flow mt-3">
+                    <img class="img-fluid" src="img/labportal/1-3-select.png" alt="실험 데이터 표에서 튜브 3개를 고르면 나타나는 선택 바" />
+                    <p class="captions">① 튜브 선택</p>
+                    <img class="img-fluid" src="img/labportal/1-4-common-values.png" alt="공통값 입력 창" />
+                    <p class="captions">② 공통값 입력</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 2 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 2</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>결과지와 검사값을 나란히 배치해 화면 이동을 줄였습니다</h4>
+                <p>
+                    결과지는 전달 후 수정하기 어려워 승인 전 확인이 중요했습니다. 결과지와 검사값을 한 화면에서 비교하고, 값이 변경되면 결과지를 다시 생성한 뒤 승인하도록 설계했습니다.
+                </p>
+                <h5 class="mt-4">이전 시안</h5>
+                <img class="img-fluid mt-2" src="img/labportal/wire-kr.png" alt="시도 1: 표에 확인 항목을 추가해 승인 버튼이 밀려남. 시도 2: 각 항목 아래에 검사값을 표시해 정보가 반복됨" />
+                <p class="captions">당시 화면을 남기지 않아 구조만 다시 그렸습니다</p>
+                <h5 class="mt-4">최종 설계: 결과지 검토 화면</h5>
+                <img class="img-fluid mt-2" src="img/labportal/2-3-review.png" alt="결과지 검토 화면 — 왼쪽 샘플 결과지, 오른쪽 검사값" />
+                <p class="captions">결과지 검토 화면 (샘플 결과지, 가상 데이터)</p>
+                <div class="lp-secondary">
+                    <h6>참여자용 결과지 발송 전 검토</h6>
+                    <img class="img-fluid" src="img/labportal/5-2-presend-review.png" alt="참여자용 결과지 발송 전 검토 — 결과지 검토와 같은 화면 구성" />
+                    <p class="captions">같은 화면 구성을 참여자용 결과지 검토에도 적용했습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 3 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 3</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>수동으로 관리하던 검사 진행 현황을 한눈에 확인하도록 설계했습니다</h4>
+                <p>
+                    기존에는 칸반 보드에서 검사 진행 상태를 관리하고, 검체별 마감일을 따로 확인해야 했습니다.
+                </p>
+                <p>
+                    실험 데이터에 따라 검사 단계와 마감일을 자동으로 집계해, 운영팀이 우선 확인할 검체와 지연 현황을 한눈에 파악하도록 설계했습니다.
+                </p>
+                <div class="row lp-compare mt-4 g-4">
+                    <div class="col-md-6">
+                        <h6>기존 방식: 칸반 보드</h6>
+                        <img class="img-fluid" src="img/labportal/6-0-kanban-before.png" alt="기존 방식 — 업무 관리 앱의 칸반 보드" />
+                        <p class="captions">검사 단계가 바뀔 때마다 카드를 직접 옮기고 검체별 마감일을 별도로 확인</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 style="color: #2A52BC;">개선 후: 검사 진행 현황 대시보드</h6>
+                        <img class="img-fluid" src="img/labportal/6-1-dashboard.png" alt="개선 후 — 검사 진행 현황 대시보드 (가상 데이터)" />
+                        <p class="captions">실험 데이터에 따라 검사 단계가 자동으로 변경되고 검체별 마감일과 지연 현황을 한 화면에 표시</p>
+                    </div>
+                </div>
+                <div class="lp-quote mt-4">
+                    <p>"실험 데이터만 올라오면 다음 단계로 저절로 넘어가니까, 트래킹이 훨씬 편해졌어요"</p>
+                    <p class="lp-note">— 운영 담당자</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 4 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 4</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>참여자에게 필요한 검사 결과만 보여주도록 설계했습니다</h4>
+                <p>
+                    연구 참여자는 성별과 결과 수신 동의 여부에 따라 제공받는 검사 결과가 다릅니다. 결과지 제작과 전달 업무에서 발견한 문제를 바탕으로 참여자별 결과 화면을 설계했습니다.
+                </p>
+                <h5 class="mt-4">운영 과정에서 발견한 문제와 설계 결정</h5>
+                <ol>
+                    <li><strong>다른 사람이 검사 결과를 열람하지 않도록 하려면?</strong> — 본인 확인 후 결과를 조회하도록 했습니다.</li>
+                    <li><strong>참여자마다 다른 검사 결과를 어떻게 보여줄까?</strong> — 성별과 동의 여부에 따라 제공할 검사 결과를 구분했습니다.</li>
+                    <li><strong>아직 준비되지 않은 결과는 어떻게 보여줄까?</strong> — 결과 준비 중인 항목은 화면에서 뺐습니다.</li>
+                    <li><strong>참여자에게 어떤 정보가 필요할까?</strong> — 회사 로고 대신 연구명과 문의처를 표시했습니다.</li>
+                </ol>
+                <img class="img-fluid mt-4" src="img/labportal/phones-kr.png" alt="참여자 화면 — 본인 확인, 여성(혈액검사 + 난소암), 남성(혈액검사) (가상 데이터)" />
+            </div>
+        </div>
+
+        <!-- Decision 5 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 5</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>넓은 표 화면을 휴대폰에 맞게 다시 배치했습니다</h4>
+                <p>표를 그대로 줄이지 않고, 휴대폰 너비에 맞게 정보의 순서와 모양을 다시 정했습니다.</p>
+                <ol>
+                    <li><strong>화면에 맞게 정보 재배치</strong> — 단계별 현황은 한 줄에 한 단계씩, 검체 목록은 필요한 정보 중심으로 구성했습니다.</li>
+                    <li><strong>검색과 필터를 바텀시트로 제공</strong> — 검색과 필터를 하나의 바텀시트에 모아, 목록을 확인하면서 조건을 설정하도록 했습니다.</li>
+                </ol>
+                <img class="img-fluid mt-4" src="img/labportal/mobile-kr.png" alt="휴대폰 화면 — 검체 현황, 검체 목록, 검색과 필터 (가상 데이터)" />
+            </div>
+        </div>
+
+        <!-- Details -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Details</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>실제 운영에서 발생하는 예외 상황까지 고려했습니다</h4>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">CONFLICT</div>
+                        <h5>동시 수정 충돌 방지</h5>
+                        <p class="mb-0">두 사람이 같은 데이터를 수정하면, 기존 변경 사항을 덮어쓰지 않도록 안내합니다.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/1-5-conflict-crop.png" alt="동시 수정 안내" /></div>
+                    </div></div>
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">CONSISTENCY</div>
+                        <h5>날짜 입력 형식 통일</h5>
+                        <p class="mb-0">브라우저에 따라 다르게 표시되던 날짜 입력 형식을 동일하게 적용했습니다.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/4-1-date-crop.png" alt="날짜 입력 칸 변경 전후" /></div>
+                    </div></div>
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">HISTORY</div>
+                        <h5>변경 이력 확인</h5>
+                        <p class="mb-0">누가 어떤 검체의 값을 수정했는지, 변경 전후 내용을 기록하고 확인할 수 있습니다.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/9-5-audit-crop.png" alt="변경 기록" /></div>
+                    </div></div>
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">REVIEW</div>
+                        <h5>정정 내역 확인</h5>
+                        <p class="mb-0">결과지를 정정할 때 변경된 항목과 사유, 건수를 요약해 확인합니다.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/2-4-correction.png" style="max-width:72%" alt="정정본 전송 확인 창" /></div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Impact</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>흩어진 결과지 업무를 하나의 포털로 연결했습니다</h4>
+                <p>여러 도구를 오가며 처리하던 결과지 생성부터 검토, 승인, 전달까지 하나의 포털로 연결했습니다.</p>
+                <div class="lp-impact"><div class="row g-3">
+                    <div class="col-lg-4"><div class="pan"><div class="pan-t"><b>BEFORE</b>여러 도구를 오가던 업무</div>
+                        <div class="row-b"><b>구글 시트</b>검사값 정리</div><div class="row-b"><b>엑셀</b>스크립트용 파일로 저장</div><div class="row-b"><b>인디자인</b>스크립트로 결과지 생성</div><div class="row-b"><b>스크립트</b>비밀번호와 링크 생성</div><div class="row-b"><b>웹페이지</b>링크 게시</div><div class="row-b"><b>엑셀</b>전달 목록 정리 및 공유</div><div class="row-b dash"><b>인쇄</b>직접 배달</div>
+                    </div></div>
+                    <div class="col-lg-4"><div class="pan"><div class="pan-t"><b>AFTER</b>하나의 포털에서 처리</div><div class="after">
+                        <div class="step"><i>1</i>결과지 생성</div><div class="step"><i>2</i>결과지와 검사값 비교</div><div class="step"><i>3</i>검토 및 승인</div><div class="step"><i>4</i>참여자용 링크 생성</div><div class="step"><i>5</i>협력 기관에 결과지 전달</div>
+                    </div></div></div>
+                    <div class="col-lg-4 lp-result"><div><strong>결과지 생성부터 전달 준비까지</strong></div><div class="num"><span>약 10분</span> <span>→ 30초</span></div><div class="sub">운영 담당자 체감 기준, 별도 시간 측정 없음</div></div>
+                </div></div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Reflection</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>이 프로젝트를 통해 배운 점</h4>
+                <h5>직접 비교하고 질문하며 설계하기</h5>
+                <p>
+                    두 가지 입력 방식을 구현해 동료와 비교하고, 운영 과정에서 발견한 문제를 반영해 설계를 개선했습니다.
+                </p>
+                <h5>데이터의 정확성도 사용자 경험의 일부</h5>
+                <p>
+                    검사값과 점수가 정확해야 결과 화면도 믿고 사용할 수 있습니다. 화면을 설계하는 것만큼 데이터의 정확성을 확인하는 일도 중요하다는 것을 배웠습니다.
+                </p>
+                <h5>AI로 빠르게 구현하고 직접 검증하기</h5>
+                <p>
+                    AI를 활용해 설계안을 빠르게 구현하고, 실제 화면에서 동작을 확인하며 반복적으로 개선했습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -66,9 +66,13 @@ jobs:
           )
           npx --yes staticrypt _site/riskreport.html    -p "$RR_PW" "${STATICRYPT_OPTS[@]}" -d /tmp/enc
           npx --yes staticrypt _site/riskreport-kr.html -p "$RR_PW" "${STATICRYPT_OPTS[@]}" -d /tmp/enc
+          npx --yes staticrypt _site/labportal.html     -p "$RR_PW" "${STATICRYPT_OPTS[@]}" -d /tmp/enc
+          npx --yes staticrypt _site/labportal-kr.html  -p "$RR_PW" "${STATICRYPT_OPTS[@]}" -d /tmp/enc
           cp /tmp/enc/riskreport.html    _site/riskreport.html
           cp /tmp/enc/riskreport-kr.html _site/riskreport-kr.html
-          echo "Riskreport pages encrypted with custom prompt."
+          cp /tmp/enc/labportal.html     _site/labportal.html
+          cp /tmp/enc/labportal-kr.html  _site/labportal-kr.html
+          echo "Riskreport and labportal pages encrypted with custom prompt."
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,359 @@
+---
+layout: default
+title: Foretell Lab Portal — Yejin Cathy Park
+work: true
+---
+<style>
+    .lp-num { color: #2A52BC; font-weight: 700; font-size: 1.5rem; line-height: 1; margin-bottom: .5rem; }
+    .lp-list { list-style: none; padding: 0; }
+    .lp-list li { padding: .4rem 0; border-bottom: 1px solid #eee; }
+    .lp-quote { border-left: 3px solid #2A52BC; padding: .25rem 0 .25rem 1.25rem; }
+    .lp-quote p { margin-bottom: .25rem; }
+    .lp-note { color: #888; font-size: .9rem; text-align: left; }
+    .lp-label { color: #2A52BC; font-weight: 700; font-size: .8rem; letter-spacing: .05em; margin-bottom: .25rem; }
+    .lp-impact { background: #2A52BC; color: #fff; border-radius: 16px; padding: 20px; margin-top: 1.5rem; }
+    .lp-impact .pan { background: rgba(255,255,255,.12); border-radius: 12px; padding: 14px; height: 100%; display: flex; flex-direction: column; }
+    .lp-impact .pan-t { font-size: .9rem; margin-bottom: 12px; opacity: .9; }
+    .lp-impact .pan-t b { margin-right: .5rem; opacity: 1; }
+    .lp-impact .row-b { display: flex; gap: 12px; background: rgba(255,255,255,.14); border-radius: 6px; padding: 7px 10px; margin-bottom: 6px; font-size: .8rem; }
+    .lp-impact .row-b { flex: 1; align-items: center; }
+    .lp-impact .row-b b { width: 5.6em; flex: none; white-space: nowrap; }
+    .lp-impact .row-b.dash { background: none; border: 1px dashed rgba(255,255,255,.6); }
+    .lp-impact .after { background: #fff; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+    .lp-impact .step { display: flex; align-items: center; gap: 10px; background: #eef1fb; color: #2A52BC; font-weight: 600; border-radius: 6px; padding: 7px 10px; flex: 1; margin-bottom: 0; font-size: .8rem; }
+    .lp-impact .step:last-child { margin-bottom: 0; }
+    .lp-impact .step i { font-style: normal; width: 22px; height: 22px; flex: none; border-radius: 50%; background: #2A52BC; color: #fff; font-size: .75rem; display: flex; align-items: center; justify-content: center; }
+    .lp-impact .lp-result { display: flex; flex-direction: column; justify-content: center; padding: 8px 14px; }
+    .lp-impact .num span { display: inline-block; white-space: nowrap; }
+    .lp-impact .num { font-size: clamp(1.9rem, 7vw, 2.6rem); overflow-wrap: anywhere; font-weight: 700; line-height: 1.1; letter-spacing: -1px; margin: .25rem 0; }
+    .lp-impact .sub { font-size: .85rem; opacity: .75; }
+    .lp-big { font-size: 2.5rem; font-weight: 700; color: #333; line-height: 1.1; letter-spacing: -1px; }
+    .lp-secondary { margin: 3.5rem auto 0; max-width: 78%; }
+    .lp-secondary h6 { font-weight: 600; margin-bottom: .5rem; }
+    .lp-compare h6 { font-weight: 600; margin-bottom: .5rem; }
+    .lp-compare .captions { text-align: left; }
+    .lp-dcard { height: 100%; display: flex; flex-direction: column; }
+    .lp-dcard h5 { margin-bottom: .5rem; }
+    .lp-dcard p { font-size: .95rem; }
+    .lp-dimg { margin-top: 1rem; }
+    .lp-dimg img { width: 100%; border: 1px solid #e6e8f0; border-radius: 8px; }
+    .lp-flow img + .captions { margin-top: .5rem; margin-bottom: 1.25rem; }
+    .lp-flow .captions:last-child { margin-bottom: 0; }
+    .workDetail h4:not(.head) { font-size: calc(1.43rem + .34vw); padding-bottom: 20px; }
+    @media (min-width: 1200px) { .workDetail h4:not(.head) { font-size: 1.68rem; } }
+    @media (max-width: 767px) {
+        .lp-secondary { max-width: 100%; }
+    }
+</style>
+<div class="workDetail">
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="img/labportal/banner.png" alt="The portal's sample list on a laptop and a research participant's results screen on a phone (mock data)" />
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center">
+        <div class="row">
+            <div class="col">
+                <h1>Foretell Lab Portal: Bringing Lab Operations into One Portal</h1>
+                <h2>Product Design + Internal Tool</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-sm-2">
+                <h3>Overview</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4 class="head">Brief</h4>
+                <p>
+                    I designed and built a web portal that brings test data and report workflows into one place, replacing a process spread across spreadsheets, scripts, and design tools. The portal reached initial operational use in approximately two weeks.
+                </p>
+                <h4 class="head">Challenge</h4>
+                <p>
+                    Testing couldn't pause during the transition. The portal needed to support the operations team's work immediately while allowing the lab team to transition without disrupting familiar workflows.
+                </p>
+                <h4 class="head">Duration</h4>
+                <p>Sep 30, 2026 - Present (in production)</p>
+                <h4 class="head">Role</h4>
+                <p>Product Designer — End-to-end UX/UI design and AI-assisted implementation</p>
+                <div class="row">
+                    <div class="col-sm-6 col-12 skills">
+                        <h4 class="head">Methods</h4>
+                        <ul>
+                            <li>Workflow Analysis</li>
+                            <li>User Feedback</li>
+                            <li>Comparative Prototyping</li>
+                            <li>Iterative Design</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-12 skills">
+                        <h4 class="head">Tools</h4>
+                        <ul>
+                            <li>Claude Code</li>
+                            <li>Python (FastAPI)</li>
+                            <li>PostgreSQL</li>
+                            <li>Notion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Problem</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Each step of the testing workflow lived in a different tool</h4>
+                <h5 class="mt-4">Stakeholders</h5>
+                <ul>
+                    <li><strong>Lab team</strong> — receives samples and records lab data.</li>
+                    <li><strong>Operations team</strong> — tracks testing progress, and prepares and delivers reports.</li>
+                    <li><strong>Research participants</strong> — view their test results.</li>
+                </ul>
+                <h5 class="mt-5">Key Problems</h5>
+                <p>
+                    <strong>A fragmented workflow with repeated manual steps.</strong> Getting from data entry to report delivery meant switching tools and re-entering or reformatting the same information. Scripts automated parts of the process, but people still had to connect the steps.
+                </p>
+                <p>
+                    <strong>Little visibility or control.</strong> It was hard to see each sample's status and deadline, and there was no edit history or access control.
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Approach</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Three principles guided the design</h4>
+                <p>
+                    I found problems by doing the report work myself, and gathered input from an operations team member with lab experience, the data management team and the lab team. I set the direction around existing workflows, then used test data to check and refine the implemented screens.
+                </p>
+                <div class="row mt-4">
+                    <div class="col-sm-4">
+                        <div class="lp-num">01</div>
+                        <h5>One place for the work</h5>
+                        <p>Checks and record-keeping that were spread across tools now happen in one portal.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="lp-num">02</div>
+                        <h5>Keep familiar workflows</h5>
+                        <p>The familiar table stays; new features reduce repetitive entry.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="lp-num">03</div>
+                        <h5>Fit the person and the device</h5>
+                        <p>Each person sees only the results that apply to them, and layouts adapt to the screen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 1 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 1</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Bulk entry inside the familiar table, not a new screen</h4>
+                <p>
+                    Lab staff had to enter the same values tube by tube. I built two approaches with test data, compared them with an operations team member who has lab experience, and chose to extend the existing table.
+                </p>
+                <div class="row mt-4">
+                    <div class="col-sm-5">
+                        <img class="img-fluid" style="filter: grayscale(1); opacity: .75;" src="img/labportal/1-2-option1.png" alt="Rejected alternative — a dedicated batch entry screen" />
+                    </div>
+                    <div class="col-sm-7">
+                        <p class="lp-note mb-1">Rejected alternative</p>
+                        <h5>Dedicated batch entry screen</h5>
+                        <p>Two screens for the same job would force people to decide which one to use.</p>
+                    </div>
+                </div>
+                <h5 class="mt-5">Final design: bulk entry in the existing table</h5>
+                <ol class="mt-3">
+                    <li><strong>Reuse the existing selection pattern</strong> — the same selection as the sample list and reports, so there's nothing new to learn.</li>
+                    <li><strong>Apply shared values at once</strong> — one entry fills many tubes. Defaults are based on about 600 past entries.</li>
+                    <li><strong>Leave dates to the user</strong> — dates aren't pre-filled, so a wrong date can't slip in unnoticed. A "Today" button keeps entry quick.</li>
+                </ol>
+                <div class="lp-flow mt-3">
+                    <img class="img-fluid" src="img/labportal/1-3-select.png" alt="Selecting three tubes in the lab data table shows the selection bar" />
+                    <p class="captions">① Select tubes</p>
+                    <img class="img-fluid" src="img/labportal/1-4-common-values.png" alt="Shared values dialog" />
+                    <p class="captions">② Enter shared values</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 2 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 2</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Showing the report and its values side by side</h4>
+                <p>
+                    Reports are hard to correct once delivered, so the check before approval matters most. Reviewers compare the report with its values on one screen. If a value changes after the report is generated, the report must be regenerated before it can be approved.
+                </p>
+                <h5 class="mt-4">Earlier attempts</h5>
+                <img class="img-fluid mt-2" src="img/labportal/wire-en.png" alt="Try 1: extra columns pushed the approve button off screen. Try 2: values under each row repeated information" />
+                <p class="captions">Structure redrawn; the original screens weren't saved</p>
+                <h5 class="mt-4">Final design: report review screen</h5>
+                <img class="img-fluid mt-2" src="img/labportal/2-3-review.png" alt="Report review screen — sample report on the left, values on the right" />
+                <p class="captions">Report review screen (sample report, mock data)</p>
+                <div class="lp-secondary">
+                    <h6>Participant report pre-send review</h6>
+                    <img class="img-fluid" src="img/labportal/5-2-presend-review.png" alt="Participant report pre-send review — same layout as the report review screen" />
+                    <p class="captions">The same layout, reused to review participant reports before sending.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 3 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 3</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Making testing progress visible at a glance</h4>
+                <p>
+                    Progress was tracked on a kanban board. Someone moved each card by hand whenever a stage changed, and checked each sample's deadline separately.
+                </p>
+                <p>
+                    The portal now tallies samples by stage and calculates deadlines, so the operations team can see which samples need attention first. Stages update as lab data comes in, and every sample's deadline and delay status appears on one screen.
+                </p>
+                <div class="row lp-compare mt-4 g-4">
+                    <div class="col-md-6">
+                        <h6>Before: kanban board</h6>
+                        <img class="img-fluid" src="img/labportal/6-0-kanban-before.png" alt="Before — kanban board in a task management app" />
+                        <p class="captions">Cards moved by hand at every stage change, with deadlines checked separately</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 style="color: #2A52BC;">After: testing progress dashboard</h6>
+                        <img class="img-fluid" src="img/labportal/6-1-dashboard.png" alt="After — testing progress dashboard (mock data)" />
+                        <p class="captions">Stages update from lab data, with every sample's deadline and delay status on one screen</p>
+                    </div>
+                </div>
+                <div class="lp-quote mt-4">
+                    <p>"Once the lab data is in, it just moves to the next stage, so tracking got so much easier."</p>
+                    <p class="lp-note">— Operations team member</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decision 4 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 4</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Showing participants only the results that apply to them</h4>
+                <p>
+                    Which results a research participant receives depends on their sex and what they consented to receive. I designed the participant results screen around issues I ran into while preparing and delivering reports.
+                </p>
+                <h5 class="mt-4">Issues found in operations, and how the design responded</h5>
+                <ol>
+                    <li><strong>How do we keep results private?</strong> — Results open only after identity verification.</li>
+                    <li><strong>How do we show different results to different people?</strong> — Results are filtered by sex and consent.</li>
+                    <li><strong>What should appear for results that aren't ready?</strong> — Nothing. Pending results are left off the screen.</li>
+                    <li><strong>What do participants actually need to see?</strong> — The study name and a contact, instead of the company logo.</li>
+                </ol>
+                <img class="img-fluid mt-4" src="img/labportal/phones-en.png" alt="Participant screens — identity check, female (blood test + ovarian cancer), male (blood test) (mock data, Korean UI)" />
+            </div>
+        </div>
+
+        <!-- Decision 5 -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Decision 5</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Redesigning wide tables for mobile</h4>
+                <p>Instead of shrinking the tables, I reordered and reshaped the information to fit a phone screen.</p>
+                <ol>
+                    <li><strong>Restructure for the screen</strong> — progress shows one stage per row, and the sample list keeps only key information.</li>
+                    <li><strong>Search and filters in a bottom sheet</strong> — both share one bottom sheet, so people can set conditions while the list stays in view.</li>
+                </ol>
+                <img class="img-fluid mt-4" src="img/labportal/mobile-en.png" alt="Phone screens — sample status, sample list, search and filters (mock data, Korean UI)" />
+            </div>
+        </div>
+
+        <!-- Details -->
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Details</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Designing for edge cases in daily operations</h4>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">CONFLICT</div>
+                        <h5>Preventing overwrites</h5>
+                        <p class="mb-0">If two people edit the same field, the portal flags the conflict instead of overwriting the earlier change.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/1-5-conflict-crop.png" alt="Concurrent edit notice" /></div>
+                    </div></div>
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">CONSISTENCY</div>
+                        <h5>One date format</h5>
+                        <p class="mb-0">Date fields that rendered differently in each browser now use a single format.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/4-1-date-crop.png" alt="Date field before and after" /></div>
+                    </div></div>
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">HISTORY</div>
+                        <h5>Edit history</h5>
+                        <p class="mb-0">The portal records who changed which sample's values, with the values before and after.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/9-5-audit-crop.png" alt="Edit history" /></div>
+                    </div></div>
+                    <div class="col-md-6"><div class="lp-dcard">
+                        <div class="lp-label">REVIEW</div>
+                        <h5>Reviewing corrections</h5>
+                        <p class="mb-0">Before a corrected report is sent, a confirmation summarizes the changed fields, the reason and the number of reports.</p>
+                        <div class="lp-dimg"><img class="img-fluid" src="img/labportal/2-4-correction.png" style="max-width:72%" alt="Correction confirmation dialog" /></div>
+                    </div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Impact</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>Connecting the report workflow in one portal</h4>
+                <p>Report generation, review, approval and delivery prep, which used to span several tools and scripts, now happen in one portal.</p>
+                <div class="lp-impact"><div class="row g-3">
+                    <div class="col-lg-4"><div class="pan"><div class="pan-t"><b>BEFORE</b>Switching between tools</div>
+                        <div class="row-b"><b>Sheets</b>Compile test values</div><div class="row-b"><b>Excel</b>Export for the script</div><div class="row-b"><b>InDesign</b>Generate reports</div><div class="row-b"><b>Script</b>Passwords and links</div><div class="row-b"><b>Web page</b>Post links</div><div class="row-b"><b>Excel</b>Share delivery list</div><div class="row-b dash"><b>Print</b>Hand-deliver</div>
+                    </div></div>
+                    <div class="col-lg-4"><div class="pan"><div class="pan-t"><b>AFTER</b>All in one portal</div><div class="after">
+                        <div class="step"><i>1</i>Generate report</div><div class="step"><i>2</i>Check against test values</div><div class="step"><i>3</i>Review and approve</div><div class="step"><i>4</i>Create participant link</div><div class="step"><i>5</i>Deliver to partners</div>
+                    </div></div></div>
+                    <div class="col-lg-4 lp-result"><div><strong>Report generation through delivery prep</strong></div><div class="num"><span>~10 min</span> <span>→ 30 sec</span></div><div class="sub">Operations team member's estimate; not formally measured</div></div>
+                </div></div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-10">
+            <div class="col-sm-2">
+                <h3>Reflection</h3>
+            </div>
+            <div class="col-sm-6 offset-sm-1">
+                <h4>What I learned</h4>
+                <h5>Compare real options, then keep asking</h5>
+                <p>
+                    I built two data-entry approaches and compared them with an operations colleague who had lab experience, then refined the design based on issues found during operations.
+                </p>
+                <h5>Data accuracy is part of the experience</h5>
+                <p>
+                    A results screen is only trustworthy if the values and scores behind it are correct. Verifying the data turned out to matter as much as designing the screen.
+                </p>
+                <h5>Build fast with AI, verify it myself</h5>
+                <p>
+                    AI let me implement designs quickly, but the design decisions were mine. I checked how each change behaved on real screens before iterating.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
